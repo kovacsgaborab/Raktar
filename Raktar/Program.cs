@@ -34,9 +34,14 @@ namespace Raktar
 
         static void Main(string[] args)
         {
-            /*Termek t = new Termek("Póló", "Póló XXL", 1500, 10);*/   //peldanyositas
+            //Termek t = new Termek("Póló", "Póló XXL", 1500, 10);   //peldanyositas
 
             BeolvasRaktar();
+
+            foreach (var t in termekek)
+            {
+                Console.WriteLine(t.Nev);
+            }
 
             Console.ReadKey();
         }
