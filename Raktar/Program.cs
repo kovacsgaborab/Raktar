@@ -26,6 +26,7 @@ namespace Raktar
                 //t.Nev = sor[1];
                 //t.Ar = Convert.ToInt32(sor[2]);
                 //t.Db = Convert.ToInt32(sor[3]);
+
                 termekek.Add(new Termek(sor[0], sor[1], int.Parse(sor[2]), int.Parse(sor[3])));
             }
             raktar.Close();
