@@ -40,13 +40,20 @@ namespace Raktar
 
             while (!rendeles.EndOfStream)
             {
-                string[] sor = rendeles.ReadLine().Split(';');
+                string sor = rendeles.ReadLine();
+                string[] adat = sor.Split(';');
 
                 //Megrendeles m = new Megrendeles(sor[1], sor[2], sor[3]);
 
-                if (sor[0]=="M")
+                if (adat[0] == "M")
                 {
-                    megrendelesek.Add(new Megrendeles(sor[1], sor[2], sor[3]));
+                    megrendelesek.Add(new Megrendeles(adat[1], adat[2], adat[3]));
+                }
+                else
+                {
+                    //megrendelesek[megrendelesek.Count - 1].termekek.Add(sor);
+                    megrendelesek[megrendelesek.Count - 1].Tetelhozzaad(adat[2], int.Parse(adat[3]));
+
                 }
             }
             rendeles.Close();
