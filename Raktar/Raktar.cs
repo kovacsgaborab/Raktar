@@ -49,7 +49,7 @@ namespace Raktar
 
             for (int i = 0; i < szoveg.Length; i++)
             {
-                int hol = ekezetes.IndexOf(szoveg[i]);     //
+                int hol = ekezetes.IndexOf(szoveg[i]);     //a hol egyenlő lesz a szoveg i. elemének az ekezetesben elfoglalt helyével
                 if (hol > -1)
                 {
                     tmp += mire[hol];
